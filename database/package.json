@@ -1,0 +1,8 @@
+{
+	"devDependencies": {
+		"json-server": "^0.17.0"
+	},
+	"dependencies": {
+		"jsonwebtoken": "^9.0.2"
+	}
+}
