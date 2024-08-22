@@ -31,7 +31,7 @@ const username = ref('');
       const result = await postLogin(username, password)
       console.log(result);
       
-      userInfoStore.saveInfo(result.token, result.user.username)
+      userInfoStore.saveInfo(result.token, result.user.username, result.user.collect)
       playlistStore.updateStarList()
       router.replace('/profile')
     };

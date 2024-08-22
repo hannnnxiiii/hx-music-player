@@ -62,3 +62,12 @@ export const createMyStar = (name, url, songs, creator) => {
     id:creator
   })
 }
+
+// 获取收藏的歌单
+export const getCollectedList = (collect) => { 
+  const url = collect.reduce((sum, item) => {
+    return sum + `id=${item}&`
+  }, '/songlists?')
+  
+  return axios.get(url)
+}

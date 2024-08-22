@@ -19,12 +19,22 @@ export const useCollectStore = defineStore('collect', () => {
   const saveSongList = (newArr) => {  
     songList.value = newArr  
   }
+
+  // 收藏的歌单
+  const collectedList = ref([])
+
+  // 存储请求来的收藏歌单
+  const saveColList = (newArr) => {
+    collectedList.value = newArr
+  }
   return {
     dialogVisible,
     changeDiaVis,
     dialogFormVisible,
     changeDiaFormVis,
     songList,
-    saveSongList
+    saveSongList,
+    saveColList,
+    collectedList
   }
 })

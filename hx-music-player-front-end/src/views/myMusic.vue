@@ -2,10 +2,13 @@
   <div class="common-layout">
     <el-container>
       <el-aside width="250px">
-        <slideBar></slideBar>
+          <slideBar></slideBar>
+        
       </el-aside>
       <el-main>
-        <songListDetail></songListDetail>
+
+          <songListDetail></songListDetail>
+    
       </el-main>
     </el-container>
   </div>
@@ -15,3 +18,13 @@
 import slideBar from '@/components/slideBar.vue';
 import songListDetail from '@/components/songListDetail.vue';
 </script>
+
+<style scoped>
+.common-layout{
+  height: 825px;
+}
+
+.el-container{
+  height: 100%;
+}
+</style>

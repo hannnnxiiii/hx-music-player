@@ -9,12 +9,13 @@ import createDialog from './components/createDialog.vue';
 
   <div class="common-layout">
     <el-container>
-      <el-header><navBar></navBar></el-header>
+      <el-header><navBar></navBar></el-header>     
       <el-scrollbar>
-        <el-main>
-          <router-view></router-view>        
+        <el-main>      
+          <router-view></router-view>                
         </el-main>
-      </el-scrollbar>
+      </el-scrollbar>  
+        
       <el-footer><audioPlayer></audioPlayer></el-footer>
     </el-container>
     <collectDialog></collectDialog>
@@ -39,6 +40,7 @@ import createDialog from './components/createDialog.vue';
   width: 1140px;
   margin: 0 auto;
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .el-footer{

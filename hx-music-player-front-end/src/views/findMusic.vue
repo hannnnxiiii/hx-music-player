@@ -43,26 +43,27 @@ const redirectFromList = (id,e) => {
 </script>
 
 <template>
-  <el-row>
-    <el-col :span="24">
-      <div class="top-banner" @click="redirectFromBanner">
-        <topCarousel></topCarousel>
-      </div>
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="24"><div class="hot-song-list">热门歌单</div></el-col>
-  </el-row>
-  <el-row :gutter="16">
-    <el-col :span="4" v-for="item in songLists" :key="item.id">
-      <songList @click="redirectFromList(item.id,$event)">
-        <template #pic>
-          <img :src="item.url" :alt="item.alt" class="song-list-img">
-        </template>
-        <template #name>{{ item.name }}</template>
-      </songList>
-    </el-col>
-  </el-row>
+    <el-row>
+      <el-col :span="24">
+        <div class="top-banner" @click="redirectFromBanner">
+          <topCarousel></topCarousel>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="24"><div class="hot-song-list">热门歌单</div></el-col>
+    </el-row>
+    <el-row :gutter="16">
+      <el-col :span="4" v-for="item in songLists" :key="item.id">
+        <songList @click="redirectFromList(item.id,$event)">
+          <template #pic>
+            <img :src="item.url" :alt="item.alt" class="song-list-img">
+          </template>
+          <template #name>{{ item.name }}</template>
+        </songList>
+      </el-col>
+    </el-row>
+  
   
 </template>
 

@@ -4,16 +4,15 @@ import { ref } from 'vue'
 export const useUserInfoStore = defineStore('userInfo', () => {
   const userName = ref('')
   const token = ref('')
+  const collect = ref([])
   // 同步用户数据
-  const saveInfo = (newToken, newUserName) => {
-    console.log('Saving token:', newToken)
-    console.log('Saving userName:', newUserName)
+  const saveInfo = (newToken, newUserName, newCollect) => {
     token.value = newToken
     userName.value = newUserName
-    console.log('Current store state:', { token: token.value, userName: userName.value })
+    collect.value = newCollect
   }
   
-  return { userName,token,saveInfo }
+  return { userName,token,saveInfo,collect }
 },
 {
   persist: true,

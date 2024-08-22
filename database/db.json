@@ -107,6 +107,150 @@
       "songs": [],
       "creator": "testAco2",
       "id": "testAco2"
+    },
+    {
+      "name": "测试歌单1",
+      "alt": "测试歌单1",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "RdJxLp5"
+    },
+    {
+      "name": "测试歌单",
+      "alt": "测试歌单",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "o02QAIs"
+    },
+    {
+      "name": "测试歌单2",
+      "alt": "测试歌单2",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "nciIIjb"
+    },
+    {
+      "name": "测试歌单3",
+      "alt": "测试歌单3",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "-mbDAVo"
+    },
+    {
+      "name": "测试歌单4",
+      "alt": "测试歌单4",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "HMQ4wmU"
+    },
+    {
+      "name": "测试歌单5",
+      "alt": "测试歌单5",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "Bsb_Xt3"
+    },
+    {
+      "name": "测试歌单6",
+      "alt": "测试歌单6",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "tIAIf5X"
+    },
+    {
+      "name": "测试歌单7",
+      "alt": "测试歌单7",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "p9BSDH0"
+    },
+    {
+      "name": "测试歌单8",
+      "alt": "测试歌单8",
+      "url": "",
+      "songs": [
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
+      "creator": "testAco1",
+      "id": "8YoeCtU"
     }
   ],
   "users": [
@@ -114,13 +258,20 @@
       "id": 1724315064579,
       "username": "testAco1",
       "email": "1@qq.com",
-      "password": "testAco1"
+      "password": "testAco1",
+      "collect": [
+        "006"
+      ]
     },
     {
       "id": 1724315218673,
       "username": "testAco2",
       "email": "2@qq.com",
-      "password": "testAco2"
+      "password": "testAco2",
+      "collect": [
+        "001",
+        "002"
+      ]
     }
   ],
   "songs": [
