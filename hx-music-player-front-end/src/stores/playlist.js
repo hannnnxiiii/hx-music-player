@@ -2,9 +2,11 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { useUserInfoStore } from './userInfo'
 import { getCreatedList } from '@/api/songLists'
+import { getSingleSong } from '@/api/songLists'
 export const usePlaylistStore = defineStore('playlist', () => {
   const playlist = ref([])
   const userInfoStore = useUserInfoStore()
+  // 修改播放列表的方法
   const changePlaylist = (newPlaylist) => {
     playlist.value = newPlaylist
   }
@@ -22,12 +24,16 @@ export const usePlaylistStore = defineStore('playlist', () => {
   }
 
   // 传入id，有则直接播放，无则发请求push进去
-  const playSongNow = (id) => {
+  const playSongNow = async (id) => {
     const checkSongIndex = playlist.value.findIndex(item => item.id === id)  
     if(checkSongIndex !== -1){
       i.value = checkSongIndex
       isPlay.value = true
+      return
     }
+    playlist.value.splice(i.value + 1, 0, await getSingleSong(id))
+    i.value += 1
+    isPlay.value = true
   }
 
   // 记录当前播放的歌曲在playlist中的位置
@@ -43,6 +49,11 @@ export const usePlaylistStore = defineStore('playlist', () => {
     }
   }
 
+  // 设定i值的方法
+  const setI = (newNum) => {
+    i.value = newNum
+  }
+
   // 将starList的数据存入store用于共享
   const starList = ref([])
 
@@ -51,7 +62,7 @@ export const usePlaylistStore = defineStore('playlist', () => {
     starList.value = await getCreatedList(userInfoStore.userName, '我喜欢的音乐') 
   }
 
-  
+
 
   // 提供判断是否被star的方法
   function isStar(id) { 
@@ -94,6 +105,7 @@ export const usePlaylistStore = defineStore('playlist', () => {
   return { 
     playlist,
     changeI,
+    setI,
     i,
     changeStar,
     changePlaylist,

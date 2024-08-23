@@ -1,5 +1,4 @@
 
-
 import axios from './axios'
 
 export const getSongLists = () => {
@@ -80,4 +79,21 @@ export const changeCover = (listId, newUrl) => {
   return axios.patch(`/songlists/${listId}`, {
     url: newUrl
   })
+}
+
+// 获得单曲
+export const getSingleSong = (id) => {
+  return axios.get(`/songs/${id}`)
+}
+
+// 改变收藏歌单数组的内容
+export const collectSongList = (id, newCollect) => {
+  return axios.patch(`/users/${id}`, {
+    collect: newCollect
+  })
+}
+
+// 获取收藏歌单们的id
+export const getCollectedId = (userName) => {
+  return axios.get(`/users?username=${userName}`)
 }

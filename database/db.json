@@ -45,6 +45,7 @@
           "name": "勇者",
           "singer": "YOASOBI",
           "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
           "id": "001"
         }
       ],
@@ -55,7 +56,14 @@
       "name": "EVA新世纪福音战士“神曲”收录",
       "alt": "EVA新世纪福音战士“神曲”收录",
       "url": "http://localhost:3000/pic/songListPic2.jpg",
-      "songs": [],
+      "songs": [
+        {
+          "name": "晴る",
+          "singer": "ヨルシカ",
+          "url": "http://localhost:3000/pic/song2pic.jpg",
+          "id": "002"
+        }
+      ],
       "id": "002",
       "creator": "testAco1"
     },
@@ -94,216 +102,33 @@
     {
       "name": "我喜欢的音乐",
       "alt": "我喜欢的音乐",
-      "url": "http://localhost:3000/pic/defaultSongListPic.jpg",
-      "songs": [],
+      "url": "http://localhost:3000/pic/song2pic.jpg",
+      "songs": [
+        {
+          "name": "晴る",
+          "singer": "ヨルシカ",
+          "url": "http://localhost:3000/pic/song2pic.jpg",
+          "songUrl": "http://localhost:3000/song/song2.mp3",
+          "id": "002"
+        },
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "songUrl": "http://localhost:3000/song/song1.mp3",
+          "id": "001"
+        }
+      ],
       "creator": "testAco1",
       "id": "testAco1"
     },
     {
-      "name": "测试歌单1",
-      "alt": "测试歌单1",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "rWINUJo"
-    },
-    {
-      "name": "测试歌单2",
-      "alt": "测试歌单2",
-      "url": "http://localhost:3000/pic/song3pic.jpg",
-      "songs": [
-        {
-          "name": "Anytime Anywhere",
-          "singer": "milet",
-          "url": "http://localhost:3000/pic/song3pic.jpg",
-          "songUrl": "http://localhost:3000/song/song3.mp3",
-          "id": "003"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "MDSagl0"
-    },
-    {
-      "name": "测试歌单3",
-      "alt": "测试歌单3",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "Uikc2y9"
-    },
-    {
-      "name": "测试歌单4",
-      "alt": "测试歌单4",
-      "url": "http://localhost:3000/pic/song1pic.jpg",
-      "songs": [
-        {
-          "name": "勇者",
-          "singer": "YOASOBI",
-          "url": "http://localhost:3000/pic/song1pic.jpg",
-          "id": "001"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "dRs1vxT"
-    },
-    {
-      "name": "测试歌单5",
-      "alt": "测试歌单5",
-      "url": "http://localhost:3000/pic/song1pic.jpg",
-      "songs": [
-        {
-          "name": "勇者",
-          "singer": "YOASOBI",
-          "url": "http://localhost:3000/pic/song1pic.jpg",
-          "id": "001"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "qsNkh4i"
-    },
-    {
-      "name": "测试歌单6",
-      "alt": "测试歌单6",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "4aCFd55"
-    },
-    {
-      "name": "测试歌单7",
-      "alt": "测试歌单7",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "BCRR9rg"
-    },
-    {
-      "name": "测试歌单8",
-      "alt": "测试歌单8",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "BqHuw7G"
-    },
-    {
-      "name": "测试歌单9",
-      "alt": "测试歌单9",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "CGMAkwJ"
-    },
-    {
-      "name": "测试歌单10",
-      "alt": "测试歌单10",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "ANgrlgI"
-    },
-    {
-      "name": "测试歌单11",
-      "alt": "测试歌单11",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "XzHhVkV"
-    },
-    {
-      "name": "测试歌单last",
-      "alt": "测试歌单last",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "NSMs8dn"
-    },
-    {
-      "name": "测试歌单last&last",
-      "alt": "测试歌单last&last",
-      "url": "http://localhost:3000/pic/song2pic.jpg",
-      "songs": [
-        {
-          "name": "晴る",
-          "singer": "ヨルシカ",
-          "url": "http://localhost:3000/pic/song2pic.jpg",
-          "songUrl": "http://localhost:3000/song/song2.mp3",
-          "id": "002"
-        }
-      ],
-      "creator": "testAco1",
-      "id": "SA8PPUD"
+      "name": "我喜欢的音乐",
+      "alt": "我喜欢的音乐",
+      "url": "http://localhost:3000/pic/defaultSongListPic.jpg",
+      "songs": [],
+      "creator": "testAco2",
+      "id": "testAco2"
     }
   ],
   "users": [
@@ -312,6 +137,13 @@
       "username": "testAco1",
       "email": "1@qq.com",
       "password": "testAco1",
+      "collect": []
+    },
+    {
+      "id": 1724424050508,
+      "username": "testAco2",
+      "email": "2@qq.com",
+      "password": "testAco2",
       "collect": []
     }
   ],

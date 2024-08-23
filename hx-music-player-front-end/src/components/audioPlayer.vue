@@ -110,6 +110,7 @@ const loadTime = () => {
   const min = audio.value.duration/60 >= 10 ? parseInt(audio.value.duration/60) + '' : '0' + parseInt(audio.value.duration/60) 
   const sec = audio.value.duration%60 >= 10 ? parseInt(audio.value.duration%60) + '' : '0' + parseInt(audio.value.duration%60)
   duration.value = min + ':' + sec
+  audio.value.volume = volumeValue.value / 100
 }
 
 
