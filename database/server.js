@@ -29,7 +29,7 @@ server.post('/register', (req, res) => {
     return res.status(400).json({ error: 'Username or email already exists.' });
   }
 
-  const newUser = { id: Date.now(), username, email, password };
+  const newUser = { id: Date.now(), username, email, password, collect: [] };
   users.push(newUser).write();
 
   const token = generateToken(newUser);

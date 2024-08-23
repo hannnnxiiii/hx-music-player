@@ -191,17 +191,20 @@ const changeSong = (n) => {
 
 // 互动控件相关
 // 加星
-import { addSong, delSong } from '@/api/songLists';
+import { addSong, delSong, changeCover } from '@/api/songLists';
 const changeStarFn = async () => {
+  const url = computed(() => {
+    return playlistStore.starList[0].songs.length > 0 ? playlistStore.starList[0].songs[0].url : 'http://localhost:3000/pic/defaultSongListPic.jpg'
+  })
   const res = playlistStore.changeStar(playlistStore.playlist[i.value].id)
-  
   if(res){
     const obj = playlistStore.playlist[i.value]  
-    console.log(obj);
-    
-    await addSong(obj.name, obj.singer, obj.url, obj.songUrl, obj.id, userInfoStore.userName)  
+    console.log(obj);  
+    await addSong(obj.name, obj.singer, obj.url, obj.songUrl, obj.id, userInfoStore.userName)   
+    await changeCover(userInfoStore.userName, url.value)    
   }else{
     await delSong(userInfoStore.userName, playlistStore.playlist[i.value].id)
+    await changeCover(userInfoStore.userName, url.value)
   }
 }
 

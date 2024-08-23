@@ -51,6 +51,8 @@ export const usePlaylistStore = defineStore('playlist', () => {
     starList.value = await getCreatedList(userInfoStore.userName, '我喜欢的音乐') 
   }
 
+  
+
   // 提供判断是否被star的方法
   function isStar(id) { 
     if(!starList.value[0]){

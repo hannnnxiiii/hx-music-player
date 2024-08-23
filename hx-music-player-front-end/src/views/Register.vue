@@ -41,9 +41,9 @@
       const res = async (username,email,password ) => {
         const result = await postRegister(username,email,password)
         console.log(result);
-        userInfoStore.saveInfo(result.token, result.user.username)
+        userInfoStore.saveInfo(result.token, result.user.username, result.user.collect)
         // 注册完成时自动创建一个我star的歌单
-        const createRes = await createMyStar('我喜欢的音乐', '', [], result.user.username, result.user.username)
+        await createMyStar('我喜欢的音乐', 'http://localhost:3000/pic/defaultSongListPic.jpg', [], result.user.username, result.user.username)
         playlistStore.updateStarList()
         router.replace('/profile')
         

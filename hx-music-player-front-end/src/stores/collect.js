@@ -29,6 +29,11 @@ export const useCollectStore = defineStore('collect', () => {
     songList.value = newArr  
   }
 
+  // 添加新创建歌单至歌单列表
+  const pushNewList = (newObj) => {
+    songList.value.push(newObj)
+  }
+
   // 收藏的歌单
   const collectedList = ref([])
 
@@ -65,6 +70,14 @@ export const useCollectStore = defineStore('collect', () => {
     return '收藏成功'
   }
 
+  // 新创建的歌单的id
+  const newListId = ref('')
+
+  // 存储新创建的歌单的id的方法
+  const saveNewId = (newStr) => {
+    newListId.value = newStr
+  }
+
   return {
     dialogVisible,
     changeDiaVis,
@@ -74,12 +87,15 @@ export const useCollectStore = defineStore('collect', () => {
     changeTipDiaVis,
     songList,
     saveSongList,
+    pushNewList,
     saveColList,
     collectedList,
     currentSongList,
     saveCurrentList,
     singleSong,
     saveSingleSong,
-    saveSongToList
+    saveSongToList,
+    newListId,
+    saveNewId
   }
 })

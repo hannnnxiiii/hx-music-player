@@ -52,18 +52,23 @@ const goCollect = (songObj) => {
 }
 
 // 加星
-import { addSong, delSong } from '@/api/songLists';
+import { addSong, delSong, changeCover } from '@/api/songLists';
 import { useUserInfoStore } from '@/stores/userInfo';
 const userInfoStore = useUserInfoStore()
 const changeStarFn = async (obj) => {
+  const url = computed(() => {
+    return playlistStore.starList[0].songs.length > 0 ? playlistStore.starList[0].songs[0].url : 'http://localhost:3000/pic/defaultSongListPic.jpg'
+  })
   const res = playlistStore.changeStar(obj.id)
   
   if(res){  
     console.log(obj);
     
     await addSong(obj.name, obj.singer, obj.url, obj.songUrl, obj.id, userInfoStore.userName)  
+    await changeCover(userInfoStore.userName, url.value)
   }else{
     await delSong(userInfoStore.userName, obj.id)
+    await changeCover(userInfoStore.userName, url.value)
   }
 }
 

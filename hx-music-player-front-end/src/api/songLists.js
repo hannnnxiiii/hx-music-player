@@ -65,9 +65,19 @@ export const createMyStar = (name, url, songs, creator) => {
 
 // 获取收藏的歌单
 export const getCollectedList = (collect) => { 
+  if(collect.length === 0){
+    return []
+  }
   const url = collect.reduce((sum, item) => {
     return sum + `id=${item}&`
   }, '/songlists?')
   
   return axios.get(url)
+}
+
+// 更换封面
+export const changeCover = (listId, newUrl) => {
+  return axios.patch(`/songlists/${listId}`, {
+    url: newUrl
+  })
 }
