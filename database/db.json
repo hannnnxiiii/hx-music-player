@@ -28,13 +28,6 @@
       "url": "http://localhost:3000/pic/songListPic1.jpg",
       "songs": [
         {
-          "name": "勇者",
-          "singer": "YOASOBI",
-          "url": "http://localhost:3000/pic/song1pic.jpg",
-          "songUrl": "http://localhost:3000/song/song1.mp3",
-          "id": "001"
-        },
-        {
           "name": "晴る",
           "singer": "ヨルシカ",
           "url": "http://localhost:3000/pic/song2pic.jpg",
@@ -47,6 +40,12 @@
           "url": "http://localhost:3000/pic/song3pic.jpg",
           "songUrl": "http://localhost:3000/song/song3.mp3",
           "id": "003"
+        },
+        {
+          "name": "勇者",
+          "singer": "YOASOBI",
+          "url": "http://localhost:3000/pic/song1pic.jpg",
+          "id": "001"
         }
       ],
       "id": "001",
@@ -112,15 +111,7 @@
       "name": "测试歌单1",
       "alt": "测试歌单1",
       "url": "",
-      "songs": [
-        {
-          "name": "勇者",
-          "singer": "YOASOBI",
-          "url": "http://localhost:3000/pic/song1pic.jpg",
-          "songUrl": "http://localhost:3000/song/song1.mp3",
-          "id": "001"
-        }
-      ],
+      "songs": [],
       "creator": "testAco1",
       "id": "RdJxLp5"
     },
@@ -135,6 +126,12 @@
           "url": "http://localhost:3000/pic/song1pic.jpg",
           "songUrl": "http://localhost:3000/song/song1.mp3",
           "id": "001"
+        },
+        {
+          "name": "晴る",
+          "singer": "ヨルシカ",
+          "url": "http://localhost:3000/pic/song2pic.jpg",
+          "id": "002"
         }
       ],
       "creator": "testAco1",

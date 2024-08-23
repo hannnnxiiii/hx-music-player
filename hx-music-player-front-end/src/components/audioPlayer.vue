@@ -191,12 +191,14 @@ const changeSong = (n) => {
 
 // 互动控件相关
 // 加星
-// 设置定时器，节流，防止用户频繁点击浪费资源
 import { addSong, delSong } from '@/api/songLists';
 const changeStarFn = async () => {
-  const res = playlistStore.changeStar(i.value)
+  const res = playlistStore.changeStar(playlistStore.playlist[i.value].id)
+  
   if(res){
     const obj = playlistStore.playlist[i.value]  
+    console.log(obj);
+    
     await addSong(obj.name, obj.singer, obj.url, obj.songUrl, obj.id, userInfoStore.userName)  
   }else{
     await delSong(userInfoStore.userName, playlistStore.playlist[i.value].id)

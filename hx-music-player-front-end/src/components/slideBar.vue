@@ -17,7 +17,7 @@
               <el-icon><FolderChecked /></el-icon>
               <span>我创建的歌单</span>
             </template>
-            <el-menu-item :index="item.id" v-for="item in songList" :key="item.id" @click="showListInfo" :class="{hide: item.creator ===item.id}">
+            <el-menu-item :index="item.id" v-for="item in songList" :key="item.id"  :class="{hide: item.creator ===item.id}" @click="turnToInfo(item.id)">
               <div class="song-list">
                 <img :src="item.url" :alt="item.name">
                 <p>{{ item.name }}</p>
@@ -29,7 +29,7 @@
               <el-icon><Files /></el-icon>
               <span>我收藏的歌单</span>
             </template>
-            <el-menu-item index="3-1" v-for="item in collectedList" :key="item.id">
+            <el-menu-item index="3-1" v-for="item in collectedList" :key="item.id" @click="turnToInfo(item.id)">
               <div class="song-list">
                 <img :src="item.url" :alt="item.name">
                 <p>{{ item.name }}</p>
@@ -50,6 +50,7 @@ const userInfoStore = useUserInfoStore()
 // 引入获取我创建的歌单api，导航栏加载时调用
 import { getCreatedList } from '@/api/songLists';
 import { computed, nextTick, onMounted } from 'vue';
+import { getSongList } from '@/api/songLists';
 const getCreatedListFn = async (name) => {
   collectStore.saveSongList(await getCreatedList(name))
 }
@@ -67,14 +68,15 @@ const getCollectedListFn = async (collect) => {
 getCollectedListFn(userInfoStore.collect)
 const collectedList = computed(() => collectStore.collectedList)
 
+// 点击歌单，进入歌单详情页
+const turnToInfo = async (id) => {
+  const res = await getSongList(id)
+  collectStore.saveCurrentList(res)
+}
+
 
 // collectStore.saveSongList(res)
 
-
-const showListInfo = (e) => {
-  console.log(e.index);
-  
-}
 
 const handleOpen = (key, keyPath) => {
   console.log(key, keyPath)

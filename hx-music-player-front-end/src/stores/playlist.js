@@ -9,13 +9,14 @@ export const usePlaylistStore = defineStore('playlist', () => {
     playlist.value = newPlaylist
   }
   // 拿到当前播放歌曲的id，去starList里面查找，有就把它去掉，没有就把对应id的歌曲信息push
-  const changeStar = (i) => {
-    const id = playlist.value[i].id
+  const changeStar = (id) => {
     if(starList.value[0].songs.some(item => item.id === id)){
       starList.value[0].songs = starList.value[0].songs.filter(item => item.id !== id)
       return false
-    }else{     
-      starList.value[0].songs.push(playlist.value[i])
+    }else{  
+      const arr = playlist.value.filter(item => item.id === id)  
+      const obj = arr[0]
+      starList.value[0].songs.push(obj)    
       return true     
     }  
   }
@@ -54,8 +55,9 @@ export const usePlaylistStore = defineStore('playlist', () => {
   function isStar(id) { 
     if(!starList.value[0]){
       return
-    } 
+    }      
     const isStarred = starList.value[0].songs.some(song => song.id === id);
+    
     return isStarred
   }
   
